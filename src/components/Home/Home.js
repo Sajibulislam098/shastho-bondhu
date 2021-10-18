@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import Services from "../Services/Services";
 import Header from "../Shared/Header/Header";
+import Register from "../Shared/Register/Register";
 
 const Home = () => {
   return (
@@ -44,6 +45,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      {/* <Register></Register> */}
       <Services></Services>
     </div>
   );

@@ -9,7 +9,7 @@ const Service = ({service}) => {
             <img className="w-100" src={img} alt="" />
             <h4>{name}</h4>
             <p>{problem}</p>
-          <Link to="">  <Button className="btn btn-warning">Details</Button></Link>
+          <Link to={`/details/${id}`}>  <Button className="btn btn-warning">Details</Button></Link>
         </div>
     );
 };
