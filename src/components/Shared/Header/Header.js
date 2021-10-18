@@ -10,28 +10,28 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <div className="">
-      <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
+      <Navbar className=" navbar"variant="dark" collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Health Care</Navbar.Brand>
+          <Navbar.Brand href="#home"><img src="https://i.ibb.co/6NJTwGT/1592038601529-removebg-preview.png" className="w-75" alt="" /></Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link as={HashLink} to="/home#home">
+            <Nav.Link className="navlink items me-3" as={HashLink} to="/home#home" >
               Home
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#services">
+            <Nav.Link as={HashLink} to="/home#services" className=" items me-3 ">
               Services
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#experts">
+            <Nav.Link as={HashLink} to="/home#experts" className=" items me-3">
               Experts
             </Nav.Link>
             {user?.email ? (
-              <Button variant="light" onClick={logOut}>Logout</Button>
+              <Button variant="danger" onClick={logOut} className=" items me-3">Logout</Button>
             ) : (
-              <Nav.Link as={HashLink} to="/login">
+              <Nav.Link as={HashLink} to="/login" className=" items me-3">
                 Login
               </Nav.Link>
             )}
-            <Navbar.Text>
+            <Navbar.Text className="  me-3">
               Signed in as: <a href="#login">{user?.displayName}</a>
             </Navbar.Text>
           </Navbar.Collapse>

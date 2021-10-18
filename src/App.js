@@ -8,6 +8,8 @@ import AuthProvider from "./Context/AuthProvider";
 import Login from './components/Shared/Login/Login/Login';
 import PrivateRoute from './components/Shared/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Shared/Register/Register';
+import MainLogin from './components/Shared/Login/Login/MainLogin/MainLogin';
+import Footer from "./components/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -24,15 +26,14 @@ function App() {
             <Details></Details>
           </PrivateRoute>
           <Route path="/login">
-            <Login></Login>
+            <MainLogin></MainLogin>
           </Route>
-          <Route path="/register">
-            <Register></Register>
-          </Route>
+          
           <Route path="/*">
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

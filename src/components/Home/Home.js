@@ -1,52 +1,36 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import ReactPlayer from "react-player";
+import Banner from "../Banner/Banner";
+import Guide from "../Guide/Guide";
+
 import Services from "../Services/Services";
 import Header from "../Shared/Header/Header";
-import Register from "../Shared/Register/Register";
 
 const Home = () => {
   return (
     <div>
       <Header></Header>
-      <Carousel>
-        <Carousel.Item interval={1000}>
+      <Banner></Banner>
+      <div className="mt-5 container ">
+       <div className="row"> 
+       <div className="col-md-5 d-flex justify-content-center align-items-center">
           <img
-            className="d-block w-100 "
-            src="https://image.freepik.com/free-vector/healthcare-medical-with-cardiograph-line_1017-30390.jpg"
-            alt="First slide"
+          className="w-100  "
+            src="https://www.shasthobondhu.com/assets/uploads/home_content/077761300_1559630424.png"
+            alt=""
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src="https://image.freepik.com/free-vector/healthcare-medical-with-cardiograph-line_1017-30390.jpg"
-            alt="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://image.freepik.com/free-vector/healthcare-medical-with-cardiograph-line_1017-30390.jpg"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-      {/* <Register></Register> */}
+        </div>
+        <div className="col-md-7 d-flex justify-content-center mt-3 p-2">
+        <div> <h3>LIVE Interactions</h3>
+         <h6 className="text-danger mt-2 mb-3">with the specialists from the top Hospitals in India</h6>
+         
+          <ReactPlayer width="400px" height="300px" controls url="https://youtu.be/ogIoWTVOBTE" ></ReactPlayer></div>
+        </div></div>
+      </div>
       <Services></Services>
+
+
+      {/* <Guide></Guide> */}
     </div>
   );
 };
