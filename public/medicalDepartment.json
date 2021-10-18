@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "https://cdn0.scrvt.com/39b415fb07de4d9656c7b516d8e2d907/1800000007393322/c65c3fb075bd/v/8fad22531fe1/neurosurgery_header_image_1800000007393322.jpg",
+    "name": "Neurosurgery",
+    "problem": "Neurosurgery is surgery of the nervous system.",
+    "details": "It is the medical specialty concerned with the diagnosis and treatment of of patients with injury to, or diseases/disorders of the brain, spinal cord and spinal column, and peripheral nerves within all parts of the body.Our nervous system is composed of our brain, spine and connecting nerves. A neurologist and neurosurgeon both treat patients with neurological disorders that impact the brain, spinal cord, nerves and their surrounding and supporting structures."
+  },
+  {
+    "id": 2,
+    "img": "https://www.narayanahealth.org/blog/wp-content/uploads/2019/11/shutterstock_1423084877.jpg",
+    "name": "Nephrology",
+    "problem": "Neurosurgery is surgery of the nervous system.",
+    "details": "It is the medical specialty concerned with the diagnosis and treatment of of patients with injury to, or diseases/disorders of the brain, spinal cord and spinal column, and peripheral nerves within all parts of the body.Our nervous system is composed of our brain, spine and connecting nerves. A neurologist and neurosurgeon both treat patients with neurological disorders that impact the brain, spinal cord, nerves and their surrounding and supporting structures"
+  },
+  {
+    "id": 3,
+    "img": "https://www.austinfertility.com/wp-content/uploads/2015/04/In-Vitro-Fertilization.jpg",
+    "name": "IVF Fertilization",
+    "problem": "In vitro fertilization (IVF) is a type of assistive reproductive technology (ART)",
+    "details": "In vitro fertilization (IVF) is a type of assistive reproductive technology (ART). It involves retrieving eggs from a woman's ovaries and fertilizing them with sperm. This fertilized egg is known as an embryo. The embryo can then be frozen for storage or transferred to a woman's uterus.In IVF, sperm and egg are combined in a laboratory dish—this is the “glass” in the name—incubated, and carefully monitored throughout the fertilization process. Over the course of 3 to 5 days, successfully fertilized eggs develop into embryos."
+  },
+  {
+    "id": 4,
+    "img": "https://smileriverbend.com/wp-content/uploads/2020/12/what-is-oral-surgery-1-16x9-lg.jpg",
+    "name": "Dentistry & Maxillofacial Surgery",
+    "problem": "Oral and maxillofacial surgeons are dental specialists who treat conditions",
+    "details": "Oral and maxillofacial surgeons are dental specialists who treat conditions, defects, injuries and esthetic aspects of the mouth, teeth, jaws and face. Their training involves a four year graduate degree in dentistry and the completion of a minimum four year hospital surgical residency program."
+  },
+  {
+    "id": 5,
+    "img": "https://allergysc.com/wp-content/uploads/2020/01/allergies-1200x675.jpg",
+    "name": "Asthma & Allergy",
+    "problem": " Allergies and asthma often occur together",
+    "details": "A lot, as it turns out. Allergies and asthma often occur together. The same substances that trigger your hay fever (allergic rhinitis) symptoms, such as pollen, dust mites and pet dander, may also cause asthma signs and symptoms. In some people, skin or food allergies can cause asthma symptoms.Common allergens include pollen, dander and mold spores. This type of asthma is very common in both children and adults. Symptoms of allergic asthma can include shortness of breath, coughing, wheezing, stuffy nose, itchy eyes and a rash."
+  },
+  {
+    "id": 6,
+    "img": "http://www.miotinternational.com/wp-content/uploads/2016/10/PET-CT.jpg",
+    "name": "Nuclear Medicine & pet CT",
+    "problem": "Since PET is a type of nuclear medicine procedure",
+    "details": "Since PET is a type of nuclear medicine procedure, this means that a tiny amount of a radioactive substance, called a radiopharmaceutical (radionuclide or radioactive tracer), is used during the procedure to assist in the examination of the tissue under study.Nuclear imaging makes images by detecting radiation from different parts of the body after a radioactive tracer material is injected or taken by mouth. The main difference between nuclear imaging and CT scans is that nuclear imaging assesses how organs function and CT scans assess how organs look"
+  }
+]
