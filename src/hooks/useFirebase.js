@@ -41,9 +41,10 @@ const useFirebase = () => {
     }
   };
   const setUserName = (e) => {
-    e.preventDefault();
+   
     updateProfile(auth.currentUser, { displayName: name })
       .then(result => { })
+
   }
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -51,7 +52,9 @@ const useFirebase = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-         setError("")
+         setError("");
+         setUserName();
+         window.location.reload();
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -68,13 +71,14 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        setError("")
+        setError("");
+        window.location.reload();
         console.log(result.user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        setError(errorMessage)
+        setError(errorMessage);
       });
   };
 
