@@ -42,8 +42,7 @@ function App() {
           <Route path="/login">
             <MainLogin></MainLogin>
           </Route>
-          
-          
+       
           <Route path="/*">
             <NotFound></NotFound>
           </Route>

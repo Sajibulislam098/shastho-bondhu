@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import useAuth from "./../../../../hooks/useAuth";
 import Header from "./../../Header/Header";
 import { Button } from 'react-bootstrap';
 
 const Login = () => {
   const { signInWithGoogle,error,handleLogin,handleEmailChange,handlePasswordChange } = useAuth();
+ 
+ 
   return (
     <div>
       {/* <h2>{loggedInUser.email}</h2> */}
       <div className="login-box d-flex align-items-center justify-content-center">
         <div className="login">
           <div className="login-box">
-            <h2 className="text-info">Pease Login</h2>
+            <h2 className="text-success">Pease Login</h2>
             <p className="text-danger">{error}</p>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin }>
               <input
                 onChange={handleEmailChange}
                 className="input-felid"

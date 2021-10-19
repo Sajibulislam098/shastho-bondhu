@@ -6,6 +6,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../components/Shared/Login/Firebase/Firebase.init";
@@ -13,12 +14,19 @@ import initializeAuthentication from "../components/Shared/Login/Firebase/Fireba
 initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [name, setName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   // --------------registration part
+
+
+ 
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  }
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -32,14 +40,18 @@ const useFirebase = () => {
       setError("")
     }
   };
-
+  const setUserName = (e) => {
+    e.preventDefault();
+    updateProfile(auth.currentUser, { displayName: name })
+      .then(result => { })
+  }
   const handleOnSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-        setError("")
+         setError("")
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -106,6 +118,8 @@ const useFirebase = () => {
     handlePasswordChange,
     handleOnSubmit,
     handleLogin,
+    handleNameChange,
+    setUserName,
     error
   };
 };
