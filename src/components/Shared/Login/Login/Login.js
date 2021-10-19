@@ -14,7 +14,7 @@ const Login = () => {
         <div className="login">
           <div className="login-box">
             <h2 className="text-success">Pease Login</h2>
-            <p className="text-danger">{error}</p>
+           
             <form onSubmit={handleLogin }>
               <input
                 onChange={handleEmailChange}
@@ -31,6 +31,7 @@ const Login = () => {
                 name="password"
                 placeholder="Enter your Password"
               />
+               <p className="text-danger">{error}</p>
               <input
                 className="mt-3 w-50 btn btn-success m-auto"
                 type="submit"
