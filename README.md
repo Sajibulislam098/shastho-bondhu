@@ -17,4 +17,4 @@
 
 ### in about us section shashtobonshus some details are here and
 
-### to sow details u have to login first
+### to show details u have to login first
