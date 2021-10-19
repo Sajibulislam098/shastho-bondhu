@@ -30,10 +30,12 @@ const Details = () => {
   // }, [details]);
   return (
     <div>
-      <Header></Header>
+ 
      
-      <Container className="pt-5">
+      <Container className="pt-5 mb-5">
+      <h1>Details of {details?.name}</h1>
         <Row>
+         
           <Col md={4}>
             <Card>
               <Card.Img variant="top" src={details?.img} />
@@ -46,6 +48,21 @@ const Details = () => {
                 <Card.Text className="mt-5">
                   <p> {details?.details}</p>
                 </Card.Text>
+              </Card.Body>
+            </Card>
+            <h1 className="mt-5 mb-5">Suggested <span className="text-danger">Doctor</span></h1>
+            <Card >
+              <Card.Body>
+                <Card.Title > <h1>{details?.doctorName}</h1> </Card.Title>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                <Card.Img  variant="top" className="w-25" src={details?.doctorImg} />
+                <Card.Text className="mt-5">
+                  <p> {details?.doctorDegree}</p>
+                  <p> {details?.spacialty}</p>
+                </Card.Text>
+                </div>
+               
+             
               </Card.Body>
             </Card>
           </Col>

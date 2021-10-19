@@ -5,7 +5,7 @@ import {
   onAuthStateChanged,
   signOut,
   createUserWithEmailAndPassword,
-
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../components/Shared/Login/Firebase/Firebase.init";
@@ -24,10 +24,12 @@ const useFirebase = () => {
   };
   const handlePasswordChange = (e) => {
     if (e.target.value.length < 6) {
-      console.error("password must need to be at least 6 characters");
-      return;
+     setError("password must need to be at least 6 characters");
+     
+     return;
     } else {
       setPassword(e.target.value);
+      setError("")
     }
   };
 
@@ -36,13 +38,33 @@ const useFirebase = () => {
     console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        console.log(result.user);
-        
+        setUser(result.user);
+        setError("")
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage)
+      });
   };
 
+  // loggin Part
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        setError("")
+        console.log(result.user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage)
+      });
+  };
 
   // google sign in part
   const googleProvider = new GoogleAuthProvider();
@@ -82,7 +104,9 @@ const useFirebase = () => {
     logOut,
     handleEmailChange,
     handlePasswordChange,
-    handleOnSubmit
+    handleOnSubmit,
+    handleLogin,
+    error
   };
 };
 

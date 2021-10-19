@@ -1,47 +1,53 @@
 import React from "react";
 import useAuth from "./../../../../hooks/useAuth";
 import Header from "./../../Header/Header";
+import { Button } from 'react-bootstrap';
 
 const Login = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle,error,handleLogin,handleEmailChange,handlePasswordChange } = useAuth();
   return (
     <div>
-      <div className="container">
-        
-        <div className="">
-          <div
-            className="row d-flex flex-column justify-content-center align-items-center "
-            style={{ height: "100vh" }}
-          >
-            <div className="col-md-6 shadow p-5">
-              <div className="form-group">
-                <label htmlFor="">User Name</label>
-                <input type="text" className="form-control" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="">Password</label>
-                <input type="password" className="form-control" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="" className="text-danger">
-                  Forgot your password?
-                </label>
-              </div>
-              
-              <div className="from-group mt-3">
-              <p>or</p>
-                <button className="btn btn-primary" onClick={signInWithGoogle}>
-                  Google Sign in
-                </button>
-              </div>
-            </div>
-            <div className="col-md-6 d-none d-md-block">
-              {/* <img className="img-fluid" src={BannerImage} alt="" /> */}
-            </div>
+      {/* <h2>{loggedInUser.email}</h2> */}
+      <div className="login-box d-flex align-items-center justify-content-center">
+        <div className="login">
+          <div className="login-box">
+            <h2 className="text-info">Pease Login</h2>
+            <p className="text-danger">{error}</p>
+            <form onSubmit={handleLogin}>
+              <input
+                onChange={handleEmailChange}
+                className="input-felid"
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+              />
+              <br />
+              <input
+                onChange={handlePasswordChange}
+                className="input-felid"
+                type="password"
+                name="password"
+                placeholder="Enter your Password"
+              />
+              <input
+                className="mt-3 w-50 btn btn-success m-auto"
+                type="submit"
+                value="Login"
+              />
+            </form>
+            <p>or</p>
           </div>
+        
+         
+          <Button className="me-2 btn btn-info" onClick={signInWithGoogle}>
+            Login with Google
+          </Button>
+          
         </div>
       </div>
     </div>
+
+    
   );
 };
 

@@ -9,16 +9,16 @@ import { Button } from 'react-bootstrap';
 const MainLogin = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="App  ">
-      <Header></Header>
+    <div className="container App mb-5 ">
+     
       <div className="row ">
         <div className="login-area col-md-6 ps-5">
           {toggle ? <Login></Login> : <Register></Register>}
 
           {toggle ? (
-            <p onClick={() => setToggle(false)} className="text-primary ">
+            <Button onClick={() => setToggle(false)} className="btn btn-light ">
               are you new please register
-            </p>
+            </Button>
           ) : (
             <Button onClick={() => setToggle(true)} className="btn btn-light ">
               already have an account ?
@@ -28,7 +28,7 @@ const MainLogin = () => {
         <div className="col-md-6">
           <div className="img">
             <img
-              className="image-fluid w-80"
+              className="image-fluid w-75"
               src="https://image.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg"
               alt=""
             />

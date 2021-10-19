@@ -8,8 +8,8 @@ import Header from "../Shared/Header/Header";
 
 const Home = () => {
   return (
-    <div>
-      <Header></Header>
+    <div id="home" >
+    
       <Banner></Banner>
       <div className="mt-5 container ">
        <div className="row"> 

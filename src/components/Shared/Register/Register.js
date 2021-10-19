@@ -2,7 +2,7 @@ import React from 'react';
 import useAuth from './../../../hooks/useAuth';
 
 const Register = () => {
-    const {handleEmailChange,handleOnSubmit,handlePasswordChange}=useAuth()
+    const {handleEmailChange,handleOnSubmit,handlePasswordChange,error}=useAuth()
     return (
         <div>
         <div className="login-box d-flex align-items-center justify-content-center">
@@ -10,21 +10,27 @@ const Register = () => {
             <div className="login-box">
               <h2 className="text-info">Pease Register</h2>
               <form onSubmit={handleOnSubmit}>
+                
                 <input
                   onChange={handleEmailChange}
                   className="input-felid"
                   type="email"
                   name="email"
                   placeholder="Enter your Email"
+                  required
                 />
                 <br />
+                
                 <input
                   onChange={handlePasswordChange}
                   className="input-felid"
                   type="password"
                   name="password"
                   placeholder="Enter your Password"
+                  required
+                  
                 />
+                <p className="text-danger">{error}</p>
                 <input
                   className="mt-3 w-50 btn btn-success m-auto"
                   type="submit"
