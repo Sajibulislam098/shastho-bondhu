@@ -1,21 +1,33 @@
 import React from "react";
 import useAuth from "./../../../hooks/useAuth";
+import { Button } from 'react-bootstrap';
+import { useHistory, useLocation } from "react-router";
 
 const Register = () => {
-  const {
+  const {signInWithGoogle,
     handleEmailChange,
-    handleOnSubmit,
+    handleRegistration,
     handlePasswordChange,
     error,
     handleNameChange,
   } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
+  console.log(location.state?.from);
+  const handleGoogleLogin = () => {
+    signInWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
   return (
     <div>
       <div className="login-box d-flex align-items-center justify-content-center">
         <div className="login">
           <div className="login-box">
-            <h2 className="text-success">Pease Register</h2>
-            <form onSubmit={handleOnSubmit}>
+            <h2 className="text-success">Please Register</h2>
+            <form onSubmit={handleRegistration}>
               <input
                 type="text"
                 onBlur={handleNameChange}
@@ -49,7 +61,12 @@ const Register = () => {
                 value="Register"
               />
             </form>
+            <p>or</p>
+            <Button className="me-2 btn btn-info" onClick={handleGoogleLogin}>
+            Login with Google
+          </Button>
           </div>
+         
         </div>
       </div>
     </div>

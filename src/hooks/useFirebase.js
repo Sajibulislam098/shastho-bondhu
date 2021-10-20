@@ -9,6 +9,7 @@ import {
   updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import initializeAuthentication from "../components/Shared/Login/Firebase/Firebase.init";
 
 initializeAuthentication();
@@ -19,6 +20,9 @@ const useFirebase = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+
+  const auth = getAuth();
 
   // --------------registration part
 
@@ -46,15 +50,16 @@ const useFirebase = () => {
       .then(result => { })
 
   }
-  const handleOnSubmit = (e) => {
+  const handleRegistration = (e) => {
     e.preventDefault();
     console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-         setError("");
+        
          setUserName();
          window.location.reload();
+         setError("");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -84,14 +89,15 @@ const useFirebase = () => {
 
   // google sign in part
   const googleProvider = new GoogleAuthProvider();
-  const auth = getAuth();
   const signInWithGoogle = () => {
+    // const history =useHistory()
     setIsLoading(true);
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .finally(() => setIsLoading(false));
+    return signInWithPopup(auth, googleProvider)
+      // .then((result) => {
+      //   setUser(result.user);
+      //   window.location.reload();
+      // })
+      // .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
@@ -120,7 +126,7 @@ const useFirebase = () => {
     logOut,
     handleEmailChange,
     handlePasswordChange,
-    handleOnSubmit,
+     handleRegistration,
     handleLogin,
     handleNameChange,
     setUserName,

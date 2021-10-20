@@ -30,18 +30,23 @@ function App() {
           <Route path="/services">
             <Services></Services>
           </Route>
+        
           <Route path="/experts">
             <Experts></Experts>
           </Route>
           <Route path="/about">
             <About></About>
           </Route>
+         
           <PrivateRoute path="/details/:detailsId">
             <Details></Details>
           </PrivateRoute>
           <Route path="/login">
             <MainLogin></MainLogin>
           </Route>
+          <Router path="/register">
+            <Register></Register>
+          </Router>
        
           <Route path="/*">
             <NotFound></NotFound>

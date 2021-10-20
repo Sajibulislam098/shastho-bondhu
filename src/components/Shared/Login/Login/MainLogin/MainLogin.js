@@ -16,17 +16,17 @@ const MainLogin = () => {
      
       <div className="row ">
         <div className="login-area col-md-6 ps-5">
-          {toggle ? <Login></Login> : <Register></Register>}
+          {toggle ?  <Register></Register>: <Login></Login> }
 
           {toggle ? (
             <Button onClick={() => setToggle(false)} className="btn btn-light ">
-              are you new please register
-            </Button>
-          ) : (
-            <Button onClick={() => setToggle(true)} className="btn btn-light ">
               already have an account ?
             </Button>
-          )}
+          ): (
+            <Button onClick={() => setToggle(true)} className="btn btn-light ">
+              are you new please register
+            </Button>
+          ) }
         </div>
         <div className="col-md-6">
           <div className="img">

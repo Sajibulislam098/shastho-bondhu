@@ -36,6 +36,9 @@ const Header = () => {
                 Login
               </Nav.Link>
             )}
+            <Nav.Link as={HashLink} to="/register" className=" items me-3">
+                Sign Up
+              </Nav.Link>
             <Navbar.Text className="  me-3">
               Signed in as: <a href="#login">{ user?.displayName}</a>
             </Navbar.Text>
