@@ -5,7 +5,7 @@ import './Services.css'
 const Service = ({ service }) => {
   const { id, img, name, problem } = service;
   return (
-    <div className="col-md-4 col-sm-6 mt-2mb-5">
+    <div className="col-md-4 col-sm-6 mt-2 mb-5">
       <div className="cart d-flex flex-column   p-2 m-2 position-relative  align-items-center">
         <img className=" img  pb-2" src={img} alt="" />
         <div className="d-flex flex-column justify-content-center align-items-center">
