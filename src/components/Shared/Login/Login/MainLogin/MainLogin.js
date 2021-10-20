@@ -3,9 +3,9 @@ import { useState } from "react";
 import Login from "./../Login";
 import Register from "./../../../Register/Register";
 import "../MainLogin/MainLogin.css";
-import Header from "./../../../Header/Header";
+
 import { Button } from 'react-bootstrap';
-import useAuth from './../../../../../hooks/useAuth';
+
 
 const MainLogin = () => {
   const [toggle, setToggle] = useState(false);

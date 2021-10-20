@@ -1,11 +1,11 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import Banner from "../Banner/Banner";
-import Guide from "../Guide/Guide";
+
 import LastInfo from "../LastInfo/LastInfo";
 
 import Services from "../Services/Services";
-import Header from "../Shared/Header/Header";
+
 
 const Home = () => {
   return (
