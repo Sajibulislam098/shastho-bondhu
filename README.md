@@ -5,16 +5,18 @@
 ## Firebase live website link : https://health-care-43d68.web.app/
 
 
-### this is a hospital realated website.where you can find doctors details
+### 1. this is a hospital realated website.where you can find doctors details
 
-### in home page navebar have some router for needed anything,a designable slider 
+### 2. in home page navbar have some router for needed anything,a designable slider 
 
-### in some service section have some department are here 
+### 3. in some service section have some department are here 
 
-### in every service have details button which shows us some details about this disease.
+### 4.in every service have details button which shows us some details about this disease.
 
-### experts part have some experts details available
+### 5. experts part have some experts details available
 
-### in about us section shashtobonshus some details are here and
+### 6. in about us section shashtobonshus some details are here and
 
-### to show details u have to login first
+### 7.to show details u have to login first
+
+### 8. if you dont have account ,you have to create an account from sign up section,by clicking sign up button or login button to create account
